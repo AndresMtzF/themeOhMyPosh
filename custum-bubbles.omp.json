@@ -121,19 +121,20 @@
           "leading_diamond": "\ue0b6",
           "properties": {
             "style": "austin",
-            "threshold": 150
+            "threshold": 0,
+            "always_enabled": true
           },
+          "background_templates": [
+            "{{ if gt .Code 0 }}#D51111{{ end }}"
+          ],
           "style": "diamond",
           "template": "{{ .FormattedMs }}",
           "trailing_diamond": "\ue0b4",
-          "type": "executiontime"
+          "type": "executiontime"   
         },
         {
           "background": "#29315A",
           "foreground": "#fff",
-          "background_templates": [
-            "{{ if gt .Code 0 }}#D51111{{ end }}"
-          ],
           "leading_diamond": "\ue0b6",
           "properties": {
             "time_format": "15:04"
@@ -159,7 +160,7 @@
         },
         {
           "background": "#29315A",
-          "foreground": "#3EC669",
+          "foreground": "#F106E3",
           "properties": {
             "style": "folder"
           },
@@ -175,3 +176,4 @@
   "final_space": true,
   "version": 2
 }
+
