@@ -19,7 +19,11 @@ Configurar la terminal
 
 1. Establecer el perfil predeterminado en la terminal de Powershell
 
+![perfil predeterminado powershell](/powershellconfig.png)
+
 2. Establecer el tipo de fuente en la terminal
+
+![fuente predeterminada powershell](/powershellFont.png)
 
 ### Instalación
 
