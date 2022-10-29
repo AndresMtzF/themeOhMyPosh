@@ -148,12 +148,37 @@
       "type": "rprompt"
     },
     {
-      "alignment": "left",      
+      "alignment": "left",
       "segments": [
         {
           "background": "#29315A",
+          "foreground": "#00D0DB",
+          "leading_diamond": "\ue0b6",      
+          "properties": {
+            "alpine": "\uf300",
+            "arch": "\uf303",
+            "centos": "\uf304",
+            "debian": "\uf306",
+            "elementary": "\uf309",
+            "fedora": "\uf30a",
+            "gentoo": "\uf30d",
+            "linux": "\ue712",
+            "macos": "\uf179 ",
+            "manjaro": "\uf312",
+            "mint": "\uf30f",
+            "opensuse": "\uf314",
+            "raspbian": "\uf315",
+            "ubuntu": "\uf31b ",
+            "windows": "\uf871 ",
+            "wsl": "\ue712"
+          },
+          "style": "diamond",
+          "template": " {{.Icon}}",
+          "type": "os"
+        },
+        {
+          "background": "#29315A",
           "foreground": "#E64747",
-          "leading_diamond": "\ue0b6",
           "style": "diamond",
           "template": "{{ .UserName }}",
           "type": "session"
@@ -176,3 +201,4 @@
   "final_space": true,
   "version": 2
 }
+
