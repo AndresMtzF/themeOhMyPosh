@@ -49,14 +49,26 @@
           "type": "go"
         },
         {
+          "background": "#29315A", 
+          "foreground": "#FE4A49",
+          "leading_diamond": "\ue0b6", 
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "diamond",         
+          "template": "\ue71e {{ .Full }}",
+          "trailing_diamond": "\ue0b4",
+          "type": "npm"
+        },
+        {
           "background": "#29315A",
           "foreground": "#42E66C",
           "leading_diamond": "\ue0b6",
           "properties": {
-            "fetch_version": false
+            "fetch_version": true
           },
           "style": "diamond",
-          "template": "\ue718{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }}{{ end }}{{ .Full }}",
+          "template": "\ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }}{{ end }}{{ .Full }}",
           "trailing_diamond": "\ue0b4",
           "type": "node"
         },
@@ -98,25 +110,6 @@
         },
         {
           "background": "#29315A",
-          "foreground": "#9B6BDF",
-          "foreground_templates": [
-            "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
-            "{{if eq \"Discharging\" .State.String}}#ff5722{{end}}",
-            "{{if eq \"Full\" .State.String}}#4caf50{{end}}"
-          ],
-          "leading_diamond": "\ue0b6",
-          "properties": {
-            "charged_icon": "\uf584 ",
-            "charging_icon": "\uf588 ",
-            "discharging_icon": "\uf58c "
-          },
-          "style": "diamond",
-          "template": "{{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}%",
-          "trailing_diamond": "\ue0b4",
-          "type": "battery"
-        },
-        {
-          "background": "#29315A",
           "foreground": "#AEA4BF",
           "leading_diamond": "\ue0b6",
           "properties": {
@@ -143,6 +136,25 @@
           "template": "\uf64f {{ .CurrentDate | date .Format }}",
           "trailing_diamond": "\ue0b4",
           "type": "time"
+        },
+        {
+          "background": "#29315A",
+          "foreground": "#9B6BDF",
+          "foreground_templates": [
+            "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
+            "{{if eq \"Discharging\" .State.String}}#ff5722{{end}}",
+            "{{if eq \"Full\" .State.String}}#4caf50{{end}}"
+          ],
+          "leading_diamond": "\ue0b6",
+          "properties": {
+            "charged_icon": "\uf584 ",
+            "charging_icon": "\uf588 ",
+            "discharging_icon": "\uf58c "
+          },
+          "style": "diamond",
+          "template": "{{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}%",
+          "trailing_diamond": "\ue0b4",
+          "type": "battery"
         }
       ],
       "type": "rprompt"
@@ -173,6 +185,7 @@
             "wsl": "\ue712"
           },
           "style": "diamond",
+          "trailing_diamond": "\ue0b4",
           "template": " {{.Icon}}",
           "type": "os"
         },
@@ -180,6 +193,7 @@
           "background": "#29315A",
           "foreground": "#E64747",
           "style": "diamond",
+          "leading_diamond": "\ue0b6",      
           "template": "{{ .UserName }}",
           "type": "session"
         },
@@ -201,4 +215,3 @@
   "final_space": true,
   "version": 2
 }
-
